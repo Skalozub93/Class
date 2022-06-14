@@ -1,6 +1,6 @@
 #include "Cat.h"
 
-void Cat::SetName()
+void Cat::SetName(string n)
 {
 	if (name == "Vlad")
 	{
@@ -9,7 +9,7 @@ void Cat::SetName()
 	else
 		cout << name << "\n";
 }
-void Cat::SetColor()
+void Cat::SetColor(string c)
 {
 	if (color == "Sero-Buro-Malinoviy")
 	{
@@ -18,17 +18,16 @@ void Cat::SetColor()
 	else
 		cout << color << "\n";
 }
-void Cat::SetAge()
-{
-	int agez;
-	if (agez <= 1 || agez >= 20)
+void Cat::SetAge(int a)
+{;
+	if (age <= 1 || age >= 20)
 	{
 		cout << "Age invalid" << "\n";
 	}
 	else
-		cout << agez << "\n";
+		cout << age << "\n";
 }
-void Cat::SetPlay()
+void Cat::SetPlay(bool pl)
 {
 	if (is_hungry == false) {
 		cout << name << " is playing\n";
@@ -40,7 +39,7 @@ void Cat::SetPlay()
 
 }
 
-void Cat::SetSleep()
+void Cat::SetSleep(bool s)
 {
 	is_hungry = true;
 	if (Cat_Sleep == true)
@@ -54,14 +53,14 @@ void Cat::SetSleep()
 	}
 }
 
-void Cat::SetHunt()
+void Cat::SetHunt(bool h)
 {
 	//is_hungry = true;
 	int probability = rand() % 2;
 	if (probability == 1)
 	{
 		cout << name << " is hunting\n";
-		cout << "Cat eating mouse" << "\n";
+		cout << name << "eating mouse" << "\n";
 	}
 	else
 	{
@@ -77,14 +76,14 @@ void Cat::SetHunt()
 	}
 }
 
-void Cat::SetHungry()
+void Cat::SetHungry(bool hung)
 {
 	if (is_hungry == false) {
 		cout << name << " is hungry\n";
 	}
 }
 
-void Cat::SetEat()
+void Cat::SetEat(bool eat)
 {
 	if (eat == false)
 	{
@@ -93,7 +92,7 @@ void Cat::SetEat()
 
 }
 
-void Cat::SetEnergy()
+void Cat::SetEnergy(int energy)
 {
 	if (Energy_Reserve == 0)
 	{
@@ -105,7 +104,7 @@ void Cat::SetEnergy()
 	}
 }
 
-void Cat::SetSpeak()
+void Cat::SetSpeak(string v)
 {
 	if (is_hungry == true || eat == false)
 	{
@@ -137,5 +136,162 @@ void Cat::SetPrint()
 	{
 		cout << "Cat is tired" << "\n";
 	}
+}
+
+Cat::Cat()
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a, bool pl)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a, double w, bool pl)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a, double w, bool pl, bool s)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat, int energy)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
+}
+Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat, int energy, string v)
+{
+	SetName("Murzik");
+	SetColor("Black");
+	SetAge(6);
+	SetHungry(false);
+	SetEat(false);
+	SetSleep(true);
+	SetPlay(true);
+	SetHunt(true);
+	SetEnergy(50);
+	SetSpeak("MEEOW");
 }
 

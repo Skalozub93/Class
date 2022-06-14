@@ -14,21 +14,23 @@ class Cat
 	bool Cat_Sleep;
 	bool Cat_Playing;
 	bool hunting;
+	string voice;
 
 public:
-	void SetName();
-	void SetColor();
-	void SetAge();
-	void SetPlay();
-	void SetSleep();
-	void SetHunt();
-	void SetHungry();
-	void SetEat();
-	void SetEnergy();
-	void SetSpeak();
+	void SetName(string n);
+	void SetColor(string c);
+	void SetAge(int a);
+	void SetWeight(double w);
+	void SetPlay(bool pl);
+	void SetSleep(bool s);
+	void SetHunt(bool h);
+	void SetHungry(bool hung);
+	void SetEat(bool eat);
+	void SetEnergy(int energy);
+	void SetSpeak(string v);
 	void SetPrint();
 
-	/*string GetName() const
+	string GetName() const
 	{
 		return name;
 		
@@ -68,6 +70,20 @@ public:
 	bool GetHunting() const
 	{
 		return hunting;
-	}*/
+	}
+
+	Cat();
+	Cat(string n);
+	Cat(string n, string c);
+	Cat(string n, string c, int a);
+	Cat(string n, string c, int a, bool pl);
+	Cat(string n, string c, int a, double w, bool pl);
+	Cat(string n, string c, int a, double w, bool pl, bool s);
+	Cat(string n, string c, int a, double w, bool pl, bool s, bool h);
+	Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung);
+	Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat);
+	Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat, int energy);
+	Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat, int energy, string v);
 };
+
 
