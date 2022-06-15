@@ -2,14 +2,15 @@
 using namespace std;
 
 class Cat
-{private:
-	
-	string name; 
-	string color; 
-	int age; 
+{
+private:
+
+	string name;
+	string color;
+	int age;
 	double weight = 5;
-	bool is_hungry; 
-	bool eat; 
+	bool is_hungry;
+	bool eat;
 	int Energy_Reserve;
 	bool Cat_Sleep;
 	bool Cat_Playing;
@@ -30,60 +31,20 @@ public:
 	void SetSpeak(string v);
 	void SetPrint();
 
-	string GetName() const
-	{
-		return name;
-		
-	}
-	string GetColor() const
-	{
-		return color;
-	}
-	int GetAge() const 
-	{
-		return age;
-	}
-	double GetWeight() const
-	{
-		return weight;
-	}
-	bool GetIsHungry() const
-	{
-		return is_hungry;
-	}
-	bool GetEat() const
-	{
-		return eat;
-	}
-	int GetEnergyReserve() const
-	{
-		return Energy_Reserve;
-	}
-	bool GetCatSleep() const
-	{
-		return Cat_Sleep;
-	}
-	bool GetCatPlaying() const
-	{
-		return Cat_Playing;
-	}
-	bool GetHunting() const
-	{
-		return hunting;
-	}
+	string GetName() const;
+	string GetColor() const;
+	int GetAge() const;
+	double GetWeight() const;
+	bool GetIsHungry() const;
+	bool GetEat() const;
+	int GetEnergyReserve() const;
+	bool GetCatSleep() const;
+	bool GetCatPlaying() const;
+	bool GetHunting() const;
 
 	Cat();
 	Cat(string n);
 	Cat(string n, string c);
 	Cat(string n, string c, int a);
 	Cat(string n, string c, int a, bool pl);
-	Cat(string n, string c, int a, double w, bool pl);
-	Cat(string n, string c, int a, double w, bool pl, bool s);
-	Cat(string n, string c, int a, double w, bool pl, bool s, bool h);
-	Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung);
-	Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat);
-	Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat, int energy);
-	Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat, int energy, string v);
 };
-
-

@@ -1,5 +1,4 @@
 #include "Cat.h"
-
 void Cat::SetName(string n)
 {
 	if (name == "Vlad")
@@ -26,6 +25,13 @@ void Cat::SetAge(int a)
 	}
 	else
 		cout << age << "\n";
+}
+void Cat::SetWeight(double w)
+{
+	if (w >= 100)
+	{
+		cout << "Your cat is dead!!!" << "\n";
+	}
 }
 void Cat::SetPlay(bool pl)
 {
@@ -138,160 +144,65 @@ void Cat::SetPrint()
 	}
 }
 
-Cat::Cat()
+
+string Cat::GetName() const
 {
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
+	return name;
+
+}
+string Cat::GetColor() const
+{
+	return color;
+}
+int Cat::GetAge() const
+{
+	return age;
+}
+double Cat::GetWeight() const
+{
+	return weight;
+}
+bool Cat::GetIsHungry() const 
+{
+	return is_hungry;
+}
+bool Cat::GetEat() const
+{
+	return eat;
+}
+int Cat::GetEnergyReserve()  const
+{
+	return Energy_Reserve;
+}
+bool Cat::GetCatSleep() const
+{
+	return Cat_Sleep;
+}
+bool Cat::GetCatPlaying() const
+{
+	return Cat_Playing;
+}
+bool Cat::GetHunting() const
+{
+	return hunting;
+}
+
+Cat::Cat() :Cat("Murzik"){}
+Cat::Cat(string n) :Cat(n,"Black") {}
+Cat::Cat(string n, string c) :Cat(n,c,5){}
+Cat::Cat(string n, string c, int a) :Cat(n,c,5,true){}
+Cat::Cat(string n, string c, int a, bool pl) 
+{
+	SetName("Bobick");
+	SetColor("Purple");
+	SetAge(13);
 	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
+	SetEat(true);
+	SetSleep(false);
 	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
+	SetHunt(false);
+	SetEnergy(30);
 	SetSpeak("MEEOW");
 }
-Cat::Cat(string n)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a, bool pl)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a, double w, bool pl)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a, double w, bool pl, bool s)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat, int energy)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
-Cat::Cat(string n, string c, int a, double w, bool pl, bool s, bool h, bool hung, bool eat, int energy, string v)
-{
-	SetName("Murzik");
-	SetColor("Black");
-	SetAge(6);
-	SetHungry(false);
-	SetEat(false);
-	SetSleep(true);
-	SetPlay(true);
-	SetHunt(true);
-	SetEnergy(50);
-	SetSpeak("MEEOW");
-}
+
 
